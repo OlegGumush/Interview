@@ -12,16 +12,16 @@ public class LeetCode_0009 {
         System.out.println(isPalindrome(1234321));
         System.out.println(isPalindrome(1214321));
         System.out.println();
-        System.out.println(internalSolution(121));
-        System.out.println(internalSolution(-121));
-        System.out.println(internalSolution(10));
-        System.out.println(internalSolution(0));
-        System.out.println(internalSolution(123321));
-        System.out.println(internalSolution(1234321));
-        System.out.println(internalSolution(1214321));
+        System.out.println(internetSolution(121));
+        System.out.println(internetSolution(-121));
+        System.out.println(internetSolution(10));
+        System.out.println(internetSolution(0));
+        System.out.println(internetSolution(123321));
+        System.out.println(internetSolution(1234321));
+        System.out.println(internetSolution(1214321));
     }
 
-    public static boolean internalSolution(int x) {
+    public static boolean internetSolution(int x) {
 
         if (x < 0) {
             return false;
