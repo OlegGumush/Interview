@@ -1,5 +1,9 @@
 package leet.code.questions;
 
+import nodes.ListNode;
+//        19. Remove Nth Node From End of List
+//        Given the head of a linked list, remove the nth node from the end of the list and return its head.
+
 public class LeetCode_0019 {
 
     public static void main(String[] args) {

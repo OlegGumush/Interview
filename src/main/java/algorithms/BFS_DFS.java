@@ -47,15 +47,6 @@ public class BFS_DFS {
         System.out.println();
     }
 
-    void DFS(int v) {
-
-        System.out.println(String.format("Run DFS from %s vertex", v));
-
-        boolean visited[] = new boolean[vertices];
-        DFS(v, visited);
-        System.out.println();
-    }
-
     void DFS(int vertex, boolean visited[]) {
 
         visited[vertex] = true;
@@ -67,6 +58,15 @@ public class BFS_DFS {
                 DFS(neighbor, visited);
             }
         }
+    }
+
+    void DFS(int v) {
+
+        System.out.println(String.format("Run DFS from %s vertex", v));
+
+        boolean visited[] = new boolean[vertices];
+        DFS(v, visited);
+        System.out.println();
     }
 
     public static void main(String args[]) {

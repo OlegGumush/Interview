@@ -3,6 +3,17 @@ package leet.code.questions;
 import java.util.ArrayList;
 import java.util.List;
 
+//        22. Generate Parentheses
+//        Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
+//
+//        Example 1:
+//        Input: n = 3
+//        Output: ["((()))","(()())","(())()","()(())","()()()"]
+//
+//        Example 2:
+//        Input: n = 1
+//        Output: ["()"]
+
 public class LeetCode_0022 {
 
     public static void main(String[] args) {
