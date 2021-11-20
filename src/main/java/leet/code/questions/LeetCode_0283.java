@@ -14,8 +14,11 @@ package leet.code.questions;
 //        Input: nums = [0]
 //        Output: [0]
 
+import tags.Facebook;
+
 import java.util.Arrays;
 
+@Facebook(value = "001", description = "https://www.educative.io/blog/cracking-top-facebook-coding-interview-questions")
 public class LeetCode_0283 {
 
     public static void main(String[] args) {

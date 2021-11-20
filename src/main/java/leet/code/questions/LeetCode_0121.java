@@ -16,6 +16,9 @@ package leet.code.questions;
 //        Output: 0
 //        Explanation: In this case, no transactions are done and the max profit = 0.
 
+import tags.Facebook;
+
+@Facebook(value = "007", description = "https://www.educative.io/blog/cracking-top-facebook-coding-interview-questions")
 public class LeetCode_0121 {
 
     public static void main(String[] args) {

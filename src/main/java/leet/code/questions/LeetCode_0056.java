@@ -1,6 +1,9 @@
 package leet.code.questions;
 
+import tags.Facebook;
+
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 //        56. Merge Intervals
@@ -16,7 +19,8 @@ import java.util.List;
 //        Output: [[1,5]]
 //        Explanation: Intervals [1,4] and [4,5] are considered overlapping.
 
-public class LeetCode_0056_TODO {
+@Facebook(value = "002", description = "https://www.educative.io/blog/cracking-top-facebook-coding-interview-questions")
+public class LeetCode_0056 {
 
     public static void main(String[] args) {
 
@@ -26,14 +30,12 @@ public class LeetCode_0056_TODO {
                 {8, 10},
                 {15, 18}
         };
-
         int invervals1[][] = new int[][]{
                 {1, 4},
-                {0, 4},
+                {2, 3}
         };
-
-
-        System.out.println(merge(invervals1));
+        int[][] merge = merge(invervals1);
+        System.out.println(merge);
     }
 
     public static int[][] merge(int[][] intervals) {
@@ -41,44 +43,25 @@ public class LeetCode_0056_TODO {
         if (intervals.length == 1) {
             return intervals;
         }
-        List<int[]> result = new ArrayList<>();
+        Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
 
+        List<int[]> result = new ArrayList<>();
         int current[] = intervals[0];
 
         int i = 1;
         while (i < intervals.length) {
 
             int[] next = intervals[i];
-            if (next[0] > current[1]) {
+
+            if (current[1] < next[0]) {
                 result.add(current);
                 current = next;
-                i++;
-                continue;
-            }
-            if (next[1] < current[0]) {
-                result.add(next);
-                i++;
-                continue;
-            }
-            if (current[0] <= next[0] && current[1] >= next[1]) {
-                // nothing
-                System.out.println();
-            } else if (next[0] <= current[0] && next[1] >= current[1]) {
-                current = next;
-            } else if (next[0] <= current[0] && next[1] <= current[1]) {
-                current[0] = next[0];
-            } else if (next[0] <= current[1] && next[1] >= current[1]) {
+            } else if (next[1] > current[1]) {
                 current[1] = next[1];
             }
             i++;
         }
         result.add(current);
-
-
-        int arr[][] = new int[result.size()][2];
-        for (int k = 0; k < result.size(); k++) {
-            arr[k] = result.get(k);
-        }
-        return arr;
+        return result.toArray(new int[0][0]);
     }
 }
