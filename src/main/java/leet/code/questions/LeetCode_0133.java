@@ -39,16 +39,17 @@ public class LeetCode_0133 {
         queue.add(node);
 
         Map<Node, Node> visited = new HashMap<>();
+        visited.put(node, new Node(node.val));
 
         while (!queue.isEmpty()) {
 
             Node currNode = queue.poll();
             // save all nodes copies
-            visited.put(currNode, new Node(currNode.val));
 
             for (Node neigh : currNode.neighbors) {
                 if (!visited.containsKey(neigh)) {
                     queue.add(neigh);
+                    visited.put(neigh, new Node(neigh.val));
                 }
             }
         }
