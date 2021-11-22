@@ -1,4 +1,4 @@
-package leet.code.questions;
+package leet.code.questions.binarysearch;
 
 // 704. Binary Search
 

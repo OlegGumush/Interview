@@ -1,4 +1,4 @@
-package leet.code.questions;
+package leet.code.questions.binarysearch;
 
 //        35. Search Insert Position
 //        Given a sorted array of distinct integers and a target value, return the index if the target is found.
