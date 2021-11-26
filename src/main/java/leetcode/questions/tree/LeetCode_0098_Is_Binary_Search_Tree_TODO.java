@@ -22,9 +22,7 @@ public class LeetCode_0098_Is_Binary_Search_Tree_TODO {
 
     public static void main(String[] args) {
 
-        System.out.println(isValidBST(new TreeNode(5,
-                new TreeNode(4),
-                new TreeNode(6, new TreeNode(3), new TreeNode(7)))));
+        System.out.println(isValidBST(new TreeNode(5, new TreeNode(4, null, null), new TreeNode(6, new TreeNode(3), new TreeNode(7)))));
 
     }
 
@@ -36,12 +34,17 @@ public class LeetCode_0098_Is_Binary_Search_Tree_TODO {
         if (root.left == null && root.right == null) {
             return true;
         }
-        if (root.right != null && root.val >= root.right.val) {
-            return false;
+        return isValidBST(root, Long.MIN_VALUE, Long.MAX_VALUE);
+    }
+
+    public static boolean isValidBST(TreeNode root, long min, long max) {
+
+        if (root == null) {
+            return true;
         }
-        if (root.left != null && root.val <= root.left.val) {
-            return false;
+        if (root.val > min && root.val < max) {
+            return isValidBST(root.left, min, root.val) && isValidBST(root.right, root.val, max);
         }
-        return isValidBST(root.left) && isValidBST(root.right);
+        return false;
     }
 }

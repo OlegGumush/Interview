@@ -19,9 +19,9 @@ package leetcode.questions.tree;
 public class LeetCode_0100_Is_Same {
 
     public static void main(String[] args) {
-
         System.out.println(isSameTree(new TreeNode(1, new TreeNode(2), new TreeNode(3)),
                 new TreeNode(1, new TreeNode(2), new TreeNode(3, new TreeNode(3), new TreeNode(2)))));
+
 
         System.out.println(isSameTree(new TreeNode(1, new TreeNode(2), new TreeNode(3)),
                 new TreeNode(1, new TreeNode(2), new TreeNode(3))));
