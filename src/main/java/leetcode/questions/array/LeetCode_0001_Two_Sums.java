@@ -22,7 +22,7 @@ package leetcode.questions.array;
 import java.util.Arrays;
 import java.util.HashMap;
 
-public class LeetCode_0001_Two_Sum {
+public class LeetCode_0001_Two_Sums {
 
     public static void main(String[] args) {
 

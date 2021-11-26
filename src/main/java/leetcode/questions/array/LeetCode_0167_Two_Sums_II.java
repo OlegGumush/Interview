@@ -25,7 +25,7 @@ package leetcode.questions.array;
 
 import java.util.Arrays;
 
-public class LeetCode_0167_Two_Sums_Two {
+public class LeetCode_0167_Two_Sums_II {
 
     public static void main(String[] args) {
 
