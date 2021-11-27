@@ -5,6 +5,9 @@ package leetcode.questions.binarysearch;
 //        If not, return the index where it would be if it were inserted in order.
 //        You must write an algorithm with O(log n) runtime complexity.
 
+import tags.Facebook;
+
+@Facebook(value = "013", description = "https://www.educative.io/blog/cracking-top-facebook-coding-interview-questions")
 public class LeetCode_0035_Search_Insert_Position {
 
     public static void main(String[] args) {
@@ -15,7 +18,6 @@ public class LeetCode_0035_Search_Insert_Position {
         System.out.println(searchInsert(new int[]{1, 3, 5, 6}, 0));
         System.out.println(searchInsert(new int[]{1}, 0));
         System.out.println(searchInsert(new int[]{1, 3}, 2));
-
     }
 
     public static int searchInsert(int[] nums, int target) {
