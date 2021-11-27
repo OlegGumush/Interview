@@ -15,26 +15,78 @@ package leetcode.questions.tree;
 
 import tags.Facebook;
 
+import java.util.LinkedList;
+
 @Facebook(value = "011", description = "https://www.educative.io/blog/cracking-top-facebook-coding-interview-questions")
 public class LeetCode_0297_Serialize_Deserialize {
 
     public static void main(String[] args) {
 
-
+        Codec codec = new Codec();
+        String serialize = codec.serialize(new TreeNode(1, new TreeNode(2, null, null), new TreeNode(3, new TreeNode(4), new TreeNode(5))));
+        System.out.println(serialize);
+        TreeNode deserialize = codec.deserialize(serialize);
+        System.out.println(deserialize);
     }
 
-    public class Codec {
+    public static class Codec {
 
         // Encodes a tree to a single string.
         public String serialize(TreeNode root) {
 
-            return null;
+            StringBuilder file = new StringBuilder("");
+            if (root == null) {
+                return file.toString();
+            }
+            LinkedList<TreeNode> queue = new LinkedList<>();
+            queue.add(root);
+
+            while (!queue.isEmpty()) {
+
+                TreeNode node = queue.removeFirst();
+
+                if (node == null) {
+                    file.append("null,");
+                    continue;
+                }
+                file.append(node.val).append(",");
+
+                queue.add(node.left);
+                queue.add(node.right);
+            }
+            return file.toString();
         }
 
         // Decodes your encoded data to tree.
         public TreeNode deserialize(String data) {
 
-            return null;
+            if (data.equals("")) {
+                return null;
+            }
+            String[] parts = data.split(",");
+            TreeNode root = new TreeNode(Integer.parseInt(parts[0]));
+            LinkedList<TreeNode> queue = new LinkedList<>();
+            queue.add(root);
+
+            int i = 1;
+            while (i < parts.length) {
+                TreeNode node = queue.poll();
+
+                if (!parts[i].equals("null")) {
+                    TreeNode left = new TreeNode(Integer.parseInt(parts[i]));
+                    node.left = left;
+                    queue.add(left);
+                }
+                i++;
+                if (!parts[i].equals("null")) {
+                    TreeNode right = new TreeNode(Integer.parseInt(parts[i]));
+                    node.right = right;
+                    queue.add(right);
+                }
+                i++;
+            }
+
+            return root;
         }
     }
 }
