@@ -18,7 +18,7 @@ import tags.Facebook;
 import java.util.LinkedList;
 
 @Facebook(value = "011", description = "https://www.educative.io/blog/cracking-top-facebook-coding-interview-questions")
-public class LeetCode_0297_Serialize_Deserialize {
+public class LeetCode_0297_Serialize_Deserialize_BFS {
 
     public static void main(String[] args) {
 
