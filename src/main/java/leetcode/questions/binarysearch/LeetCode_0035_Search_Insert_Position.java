@@ -7,7 +7,6 @@ package leetcode.questions.binarysearch;
 
 import tags.Facebook;
 
-@Facebook(value = "013", description = "https://www.educative.io/blog/cracking-top-facebook-coding-interview-questions")
 public class LeetCode_0035_Search_Insert_Position {
 
     public static void main(String[] args) {
