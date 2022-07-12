@@ -58,17 +58,17 @@ public class LeetCode_0129_Sum_Root_to_Leaf_Number {
 
     public static Integer sum(TreeNode root) {
 
-        return sum(root, "");
+        return sum(root, 0);
     }
 
-    public static Integer sum(TreeNode root, String path) {
+    public static Integer sum(TreeNode root, Integer path) {
 
         if (root == null) {
             return 0;
         }
-        path = path + root.val;
+        path = (path * 10) + root.val;
         if (root.left == null && root.right == null) {
-            return Integer.parseInt(path);
+            return path;
         }
         return sum(root.left, path) + sum(root.right, path);
     }
