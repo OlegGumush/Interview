@@ -11,7 +11,7 @@ public class LeetCode_0236_Lowest_Common_Ancestor_BT_Values {
 
     public static void main(String[] args) {
 
-        TreeNode tree = TreePrinter.print("1,2,3,null,4,null,null");
+        TreeNode tree = TreePrinter.build("3,5,1,6,2,0,8,null,null,7,4,null,null,null,null");
         TreeNode treeNode = lowestCommonAncestor(tree, new TreeNode(2), new TreeNode(3));
 
         System.out.println("Result " + treeNode.val);

@@ -9,7 +9,7 @@ import java.util.List;
 public class TreePrinter {
 
 
-    public static TreeNode print(String data) {
+    public static TreeNode build(String data) {
 
         if (data.equals("")) {
             return null;
@@ -37,11 +37,11 @@ public class TreePrinter {
             i++;
         }
 
-        TreePrinter.print(root);
+        TreePrinter.build(root);
         return root;
     }
 
-    public static void print(TreeNode root) {
+    public static void build(TreeNode root) {
         List<List<String>> lines = new ArrayList<List<String>>();
 
         List<TreeNode> level = new ArrayList<TreeNode>();
