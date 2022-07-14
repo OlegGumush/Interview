@@ -10,7 +10,7 @@ package leetcode.questions.tree;
 //        Output: 6
 //        Explanation: The LCA of nodes 2 and 8 is 6.
 
-public class LeetCode_0235_Lowest_Common_Ancestor {
+public class LeetCode_0235_Lowest_Common_Ancestor_BST {
 
     public static void main(String[] args) {
 

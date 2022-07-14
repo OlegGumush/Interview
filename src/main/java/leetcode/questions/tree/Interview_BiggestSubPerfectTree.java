@@ -44,7 +44,6 @@ public class Interview_BiggestSubPerfectTree {
 
     }
 
-
     private static int maxHeight;
 
     public int findPerfectBinaryTreeNode(TreeNode root) {
