@@ -1,5 +1,7 @@
 package leetcode.questions.tree;
 
+import utils.TreePrinter;
+
 //236. Lowest Common Ancestor of a Binary Tree
 //Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.
 //According to the definition of LCA on Wikipedia: “The lowest common ancestor is defined between two
@@ -9,11 +11,10 @@ public class LeetCode_0236_Lowest_Common_Ancestor_BT_Values {
 
     public static void main(String[] args) {
 
-        TreeNode tree = new TreeNode(1, new TreeNode(2, new TreeNode(4), new TreeNode(5)), new TreeNode(3));
-        TreeNode tree1 = new TreeNode(37, new TreeNode(-34, null, new TreeNode(-100)), new TreeNode(-48, new TreeNode(-101), new TreeNode(48, new TreeNode(-71), new TreeNode(-22))));
+        TreeNode tree = TreePrinter.print("1,2,3,null,4,null,null");
+        TreeNode treeNode = lowestCommonAncestor(tree, new TreeNode(2), new TreeNode(3));
 
-        TreeNode treeNode = lowestCommonAncestor(tree1, new TreeNode(-71), new TreeNode(48));
-        System.out.println(treeNode.val);
+        System.out.println("Result " + treeNode.val);
     }
 
     public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
